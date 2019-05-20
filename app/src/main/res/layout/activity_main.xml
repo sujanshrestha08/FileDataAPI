@@ -7,6 +7,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+  </android.support.v7.widget.RecyclerView>
+
+  <ImageView
+      android:id="@+id/imgProfile"
+      android:layout_width="300dp"
+      android:layout_height="300dp"
+      android:scaleType="fitCenter"
+      android:src="@drawable/noimage"
+      android:layout_gravity="center"
+      />
+
   <EditText
       android:id="@+id/etName"
       android:layout_width="match_parent"
