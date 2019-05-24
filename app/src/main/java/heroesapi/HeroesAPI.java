@@ -1,13 +1,12 @@
 package heroesapi;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import model.Heroes;
+import model.LoginSignupResponse;
 import okhttp3.MultipartBody;
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
@@ -30,5 +29,9 @@ public interface HeroesAPI {
 
     @GET("heroes")
     Call<ArrayList<Heroes>> getAllHeroes();
+
+    @FormUrlEncoded
+    @POST("user/login")
+    Call<LoginSignupResponse> checkUser(@Field("username") String username, @Field("password") String password);
 
 }
